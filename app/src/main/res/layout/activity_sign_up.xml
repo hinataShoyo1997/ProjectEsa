@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E7E6E6"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:id="@+id/corner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/corner"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/welcome_Onboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Onboard"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#020202"
+        app:layout_constraintBottom_toBottomOf="@id/corner"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints,SpUsage" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Let’s help you meet up your tasks"
+        android:textSize="15dp"
+        android:textColor="#020202"
+        app:layout_constraintTop_toBottomOf="@id/welcome_Onboard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints,SpUsage" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/form"
+        android:hint="Enter your Full Name"
+        android:paddingStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields" />
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/form"
+        android:hint="Phone Number"
+        android:paddingStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields" />
+    <EditText
+        android:id="@+id/gmail"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/form"
+        android:hint="Gmail"
+        android:paddingStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_number"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/form"
+        android:hint="Password"
+        android:paddingStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gmail"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields" />
+    <EditText
+        android:id="@+id/repassword"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/form"
+        android:hint="Re-Password"
+        android:paddingStart="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry,TextFields" />
+    <Button
+        android:id="@+id/sign_up_btn"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/get_started_btn"
+        android:text="Sign Up"
+        app:layout_constraintTop_toBottomOf="@id/repassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/already_have_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:text="Already have an account ?"
+        android:textSize="12dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText,OnClick,SpUsage,UsingOnClickInXml" />
+
+    <TextView
+        android:id="@+id/sign_in_btn"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#6299DF"
+        android:text="SIGN IN"
+        android:textSize="12dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@id/already_have_account"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText,KeyboardInaccessibleWidget,OnClick,SpUsage,UsingOnClickInXml" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
