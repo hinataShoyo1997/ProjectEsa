@@ -23,7 +23,6 @@ public class ForgotPassword extends AppCompatActivity {
 
     EditText mEmail;
     Button mSendBtn;
-    TextView mCreateBtn;
     FirebaseAuth firebaseAuth;
     ProgressBar progressBar;
 
@@ -36,7 +35,6 @@ public class ForgotPassword extends AppCompatActivity {
         mEmail = findViewById(R.id.emailAddress);
         progressBar = findViewById(R.id.progressBar);
         mSendBtn = findViewById(R.id.sendEmail);
-        mCreateBtn = findViewById(R.id.backBtn);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -65,11 +63,6 @@ public class ForgotPassword extends AppCompatActivity {
                     Toast.makeText(ForgotPassword.this, "Try again! Something woring Happened", Toast.LENGTH_LONG).show();
                 }
             }
-        });
-
-
-        mCreateBtn.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         });
     }
 
